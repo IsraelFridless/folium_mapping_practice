@@ -1,8 +1,12 @@
+import os
 import csv
 import folium
 import toolz as t
 
-filepath = r'C:\Users\Python\final_exam_preparation\folium_mapping_practice\app\data\Electric_Vehicle_Charging_Stations.csv'
+current_dir = os.getcwd()
+file_name = 'data/Electric_Vehicle_Charging_Stations.csv'
+filepath = os.path.join(current_dir, file_name)
+
 keys = ('Station Name', 'New Georeferenced Column')
 
 def load_csv():
